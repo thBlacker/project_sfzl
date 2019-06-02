@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cb.sfzl.dao.SfzlDao">
+
+    <!--将数据库中访问量最高的一部分数据 拿出来展示-->
+    <select id="showWorksHot" resultType="java.util.Map">
+        SELECT * FROM works  ORDER  BY FWL DESC  limit 8
+    </select>
+
+    <!--将数据库中访问量最高的一部分数据 拿出来展示-->
+    <select id="showWorksNew" resultType="java.util.Map">
+        SELECT * FROM works  ORDER  BY LRRQ DESC  limit 8
+    </select>
+
+</mapper>
